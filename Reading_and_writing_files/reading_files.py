@@ -1,5 +1,5 @@
 #to open a program called spider.txt
-file = open("/home/drtaylor1701/Documents/Using Python to interact with the operating system/Reading_and_writing_files/spider.txt")
+file = open("spider.txt")
 #creates a new file object and assigns it a variable called "file"
 
 #the parameter passed to open() is the name of the fiel we want to open - we are assuming it's in the same directory we're working in
