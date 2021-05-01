@@ -1,4 +1,4 @@
-with open("novel.txt", "w") as file:
+usrswith open("novel.txt", "w") as file:
     #the 'w' is the mode you open the file in
     #by default they are opened in "r"  - read only
     #"w" opens in write mode. If the file doesn't exist, Python will create it and if it exists the current contents will be overwritten as soon ad the file is opened.
