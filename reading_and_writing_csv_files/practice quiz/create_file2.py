@@ -13,20 +13,22 @@ def create_file(filename):
 
 # Read the file contents and format the information about each row
 def contents_of_file(filename):
-  return_string = ""
+    return_string = ""
 
   # Call the function to create the file 
-  create_file(filename)
-  #print("file created")
+    create_file(filename)
 
   # Open the file
-  with open('flowers.csv') as flowers:
-  # Read the rows of the file into a dictionary
-    reader = csv.DictReader(flowers)
-  # Process each item of the dictionary
-    for row in reader:
-      return_string += "a {} {} is {}\n".format(row["color"], row["name"], row["type"])
-  return return_string
+    with open('flowers.csv') as flowers:
+        # Read the rows of the file
+        rows = csv.reader(flowers)
+        # Process each row
+        for row in rows:
+          name, color, type = row
+        # Format the return string for data rows only
+          if color != "color":
+            return_string += "a {} {} is {}\n".format(color, name, type)
+        return return_string
 
 #Call the function
 print(contents_of_file("flowers.csv"))
