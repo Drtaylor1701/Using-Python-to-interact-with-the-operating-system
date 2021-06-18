@@ -1,6 +1,6 @@
 import re
 def check_web_address(text):
-  pattern = r"^[a-z]*\.com$"
+  pattern = r"[a-zA-Z-_][\.com|org|US]$"
   result = re.search(pattern, text)
   return result != None
 
